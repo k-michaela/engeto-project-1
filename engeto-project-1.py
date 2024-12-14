@@ -65,10 +65,13 @@ garpike and stingray are also present.'''
 
 # user fills text number
 while True:
-    user_input = int(input("Enter a number btw. 1 and 3 to select: "))
-    if user_input in range(1, 4):
-        break
-    else:
+    try:
+        user_input = int(input("Enter a number btw. 1 and 3 to select: "))
+        if user_input in range(1, 4):
+            break
+        else:
+            print("Try again.")
+    except ValueError:
         print("Try again.")
 
 print(separator)
